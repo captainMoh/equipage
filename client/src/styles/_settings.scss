@@ -1,0 +1,23 @@
+@font-face {
+  font-family: pirata;
+  src: url('./font/PirataOne-Regular.ttf');
+}
+
+$font-1: pirata,'Times New Roman', Times, serif;
+
+$color-1: #f1f1f1;
+$color-2: aliceblue;
+$color-3: #101010;
+$color-4: rgb(43, 43, 43);
+
+*, ::after, ::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $font-1;
+  color: $color-3;
+}

@@ -1,0 +1,78 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    background: url('../asset/pirate.jpg') center/cover no-repeat;
+
+    .all {
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+        
+        .equipage {
+            margin-top: 1em;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            h2 {
+                margin-bottom: 1em;
+                font-style: oblique 20deg;
+                font-size: xx-large;
+                width: 100%;
+
+                @media (max-width: 600px) {
+                    font-size: large;
+                }
+            }
+
+            .listeEquipage {
+                display: flex;
+                text-align: center;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+        }
+
+        .formulaire {
+            margin-top: 0;
+            text-align: center;
+    
+            form {
+                margin-top: .5em;
+                label {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                input, button {
+                    padding: 10px;
+                    border-radius: 50px;
+                    border: 1px solid #f1f1f1;
+                }
+                button {
+                    margin-left: 10px;
+                    border: 2px solid $color-3;
+                    transition: all .2s ease-in-out;
+                }
+    
+                button:hover {
+                    background-color: $color-3;
+                    border: 2px solid $color-1;
+                    color: $color-1;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    footer {
+        min-width: 100%;
+        text-align: center;
+        background-color: #f76c6c;
+        padding: 1em 0;
+      }
+}

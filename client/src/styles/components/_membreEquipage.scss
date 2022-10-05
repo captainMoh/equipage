@@ -1,0 +1,12 @@
+.membreEquipage {
+    width: 33.33%;
+    font-size: x-large;
+    font-weight: bold;
+    background-color: #E3AD73;
+    padding: 1em;
+    border: 1px solid #f1f1f1;
+
+    @media (max-width: 600px) {
+        font-size: x-small;
+    }
+}
