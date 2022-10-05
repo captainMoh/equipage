@@ -2,11 +2,13 @@ import MembreEquipage from './components/MembreEquipage';
 import Header from './components/Header';
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import loader from './assets/ball-triangle.svg';
 
 function App() {
 
   const [nom, setNom] = useState('');
   const [dataEquipage, setDataEquipage] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
   const options = {
     headers: {'Content-Type': 'application/json; charset=UTF-8'}
@@ -15,13 +17,17 @@ function App() {
   const getMembresEquipage = () => {
     axios.get('/membresEquipage')
       .then(docs => setDataEquipage(docs.data))
+      .then(() => setIsLoading(false))
+      .catch(error => console.log(error))
   }
 
   const addNewMembre = e => {
     e.preventDefault();
+    setIsLoading(true);
     axios.post('/membresEquipage/newMembre', {nom}, options)
       .then(() => getMembresEquipage())
       .then(() => setNom(''))
+      .catch(error => console.log(error))
   }
 
   useEffect(() => {
@@ -46,9 +52,10 @@ function App() {
         <fragment className="equipage">
         <h2>Membres de l'équipage</h2>
           
-          <div className="listeEquipage">
+          <div className="listeEquipage" id='animation'>
+          {isLoading ? <div className='loader'><img src={loader} alt='spin loader' /></div> :  false}
             {dataEquipage.map(membre => (
-              <MembreEquipage nom={membre.nom} key={membre._id} />
+              <MembreEquipage nom={membre.nom} id={membre._id} key={membre._id} />
             ))}
           </div>
         </fragment>

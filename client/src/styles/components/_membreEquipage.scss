@@ -6,7 +6,19 @@
     padding: 1em;
     border: 1px solid #f1f1f1;
 
+    button {
+        padding: 10px 5px;
+        background-color: #F6414A;
+        border-radius: 10px;
+        border: 1px solid #F6414A;
+        color: $color-1;
+
+        &:hover {
+            background-color: red;
+        }
+    }
+
     @media (max-width: 600px) {
-        font-size: x-small;
+        width: 80%;
     }
 }

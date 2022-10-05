@@ -15,5 +15,14 @@ exports.PostMembre = (req, res) => {
 
     newMembre.save()
     .then(docs => res.json(docs))
-    .catch(error => `Error creating new Membre ${error}`)
+    .catch(error => res.send(`Error creating new Membre ${error}`))
+}
+
+exports.deleteMembre = (req, res) => {
+    if(!ObjectID.isValid(req.params.id))
+        return res.status(400).send(`ID unknown : ${req.params.id}`)
+
+    Membre.findByIdAndRemove(req.params.id)
+        .then(docs => res.json(docs))
+        .catch(error => res.send(`Delete error ${error}`))
 }
