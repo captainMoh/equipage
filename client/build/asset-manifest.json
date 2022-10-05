@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.6caff3a4.css",
-    "main.js": "/static/js/main.2a77dd22.js",
+    "main.css": "/static/css/main.ee87a0e4.css",
+    "main.js": "/static/js/main.8b2ff5c4.js",
     "static/media/pirate.jpg": "/static/media/pirate.ec898adc5caf0efa7987.jpg",
     "static/media/PirataOne-Regular.ttf": "/static/media/PirataOne-Regular.269bd2986eb6f1940505.ttf",
+    "static/media/ball-triangle.svg": "/static/media/ball-triangle.26bdbaf85c961541b7da22df5e5714a8.svg",
     "index.html": "/index.html",
-    "main.6caff3a4.css.map": "/static/css/main.6caff3a4.css.map",
-    "main.2a77dd22.js.map": "/static/js/main.2a77dd22.js.map"
+    "main.ee87a0e4.css.map": "/static/css/main.ee87a0e4.css.map",
+    "main.8b2ff5c4.js.map": "/static/js/main.8b2ff5c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.6caff3a4.css",
-    "static/js/main.2a77dd22.js"
+    "static/css/main.ee87a0e4.css",
+    "static/js/main.8b2ff5c4.js"
   ]
 }
